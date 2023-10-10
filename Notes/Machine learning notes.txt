@@ -1,0 +1,498 @@
+Machine learning (ML) is a modern software development technique, and a type of artificial intelligence (AI), that enables computers to solve problems by using examples of real-world data.
+It allows computers to automatically learn and improve from experience without being explicitly programmed to do so.
+
+Machine learning is part of the broader field of artificial intelligence. This field is concerned with the capability of machines to perform activities using human-like intelligence. Within machine learning there are several different kinds of tasks or techniques:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. In SUPERVISED learning, every training sample from the dataset has a corresponding label or output value associated with it. As a result, the algorithm learns to predict labels or
+   output values. We will explore this in-depth in this lesson.
+2. In UNSUPERVISED learning, there are no labels for the training data. A machine learning algorithm tries to learn the underlying patterns or distributions that govern the data. We will 
+   explore this in-depth in this lesson.
+3. In REINFORCEMENT learning, the algorithm figures out which actions to take in a situation to maximize a reward (in the form of a number) on the way to reaching a specific goal. This is
+   a completely different approach than supervised and unsupervised learning. We will dive deep into this in the next lesson.
+
+Machine learning is a new field created at the intersection of statistics, applied math, and computer science. Because of the rapid and recent growth of machine learning, each of these fields might use slightly different formal definitions of the same terms.
+
+===========
+Terminology
+===========
+
+1. MACHINE LEARNING, or ML, is a modern software development technique that enables computers to solve problems by using examples of real-world data.
+
+2. In SUPERVISED learning, every training sample from the dataset has a corresponding label or output value associated with it. As a result, the algorithm learns to predict labels or
+   output values.
+
+3. In REINFORCEMENT learning, the algorithm figures out which actions to take in a situation to maximize a reward (in the form of a number) on the way to reaching a specific goal.
+
+4. In UNSUPERVISED learning, there are no labels for the training data. A machine learning algorithm tries to learn the underlying patterns or distributions that govern the data.
+
+
+Nearly all tasks solved with machine learning involve three primary components:
+-------------------------------------------------------------------------------
+A. A machine learning model
+B. A model training algorithm
+C. A model inference algorithm
+
+A machine learning model, like a piece of clay, can be molded into many different forms and serve many different purposes. A more technical definition would be that a machine learning model is a block of code or framework that can be modified to solve different but related problems based on the data provided.
+
+
+#Important#
+-----------
+A model is an extremely generic program (or block of code), made specific by the data used to train it. It is used to solve different problems.
+
+
+Model training algorithms work through an interactive process
+=============================================================
+
+A. Think about the changes that need to be made. 
+------------------------------------------------
+The first thing you would do is inspect the raw clay and think about what changes can be made to make it look more like a teapot. Similarly, a model training algorithm uses the model to process data and then compares the results against some end goal, such as our clay teapot.
+
+B. Make those changes.
+----------------------
+Now, you mold the clay to make it look more like a teapot. Similarly, a model training algorithm gently nudges specific parts of the model in a direction that brings the model closer to achieving the goal.
+
+C. Repeat.
+----------
+By iterating these steps over and over, you get closer and closer to what you want, until you determine that you’re close enough and then you can stop.
+
+
+=========
+KEY TERMS
+=========
+
+A model is an extremely generic program, made specific by the data used to train it.
+  `````
+
+Model training algorithms work through an interactive process where the current model iteration is analyzed to determine what changes can be made to get closer to the goal. Those changes
+`````````````````````````
+are made and the iteration continues until the model is evaluated to meet the goals.
+
+Model inference is when the trained model is used to generate predictions.
+```````````````
+
+===============
+IMPORTANT TERMS
+===============
+
+Clustering is an unsupervised learning task that helps to determine if there are any naturally occurring groupings in the data.
+``````````
+
+A categorical label has a discrete set of possible values, such as "is a cat" and "is not a cat."
+  `````````````````
+
+A continuous(regression) label does not have a discrete set of possible values, which means there are potentially an unlimited number of possibilities.
+  ````````````````````````````
+
+Discrete is a term taken from statistics referring to an outcome that takes only a finite number of values (such as days of the week).
+````````
+
+A label refers to data that already contains the solution.
+  `````
+
+Using unlabeled data means you don't need to provide the model with any kind of label or solution while the model is being trained.
+      ``````````````
+
+===================================
+5 STEPS OF Machine Learning Process
+===================================
+
+A-> Define the Problem
+======================
+
+Step 1: Define a very specific task
+
+Step 2: Identify the machine learning task we might use to solve this problem
+
+What exactly is a machine learning task?
+----------------------------------------
+
+Ans:-
+All model training algorithms, and the models themselves, take data as their input. Their outputs can be very different and are classified into a few different groups, based on the task they are designed to solve.
+Often, we use the kind of data required to train a model as part of defining a machine learning task.
+Two common machine learning tasks are:
+a. Supervised learning
+b. Unsupervised learning
+The presence or absence of labeling in your data is often used to identify a machine learning task.
+
+Supervised tasks
+----------------
+A task is supervised if you are using labeled data. We use the term labeled to refer to data that already contains the solutions, called labels. For e.g., predicting the number of snow cones sold based on the average temperature outside is an example of supervised learning.
+
+Unsupervised tasks
+------------------
+A task is considered to be unsupervised if you are using unlabeled data. This means you don't need to provide the model with any kind of label or solution while the model is being trained.
+
+
+How do we further classify tasks when we don’t have a label?
+------------------------------------------------------------
+
+Ans:-
+Unsupervised learning involves using data that doesn't have a label. One common task is called clustering. Clustering helps to determine if there are any naturally occurring groupings in the data.
+
+
+Classifying based on label type
+-------------------------------
+In supervised learning, there are two main identifiers that you will see in machine learning:
+
+1. A categorical label has a discrete set of possible values. In a machine learning problem in which you want to identify the type of flower based on a picture, you would train your model using images that have been labeled with the categories of the flower that you want to identify. Furthermore, when you work with categorical labels, you often carry out classification tasks, which are part of the supervised learning family.
+
+2. A continuous(regression) label does not have a discrete set of possible values, which often means you are working with numerical data. In the snow cone sales example, we are trying to predict the number of snow cones sold. Here, our label is a number that could, in theory, be any value.
+
+In unsupervised learning, clustering is just one example. There are many other options, such as deep learning.
+
+
+B-> Building a Dataset
+======================
+
+The most important step of the machine learning process
+-------------------------------------------------------
+
+Working with data is perhaps the most overlooked—yet most important—step of the machine learning process. In 2017, an O’Reilly study showed that machine learning practitioners spend 80% of their time working with their data.
+
+The Four Aspects of Working with Data
+-------------------------------------
+
+1. Data collection
+   ---------------
+
+Data collection can be as straightforward as running the appropriate SQL queries or as complicated as building custom web scraper applications to collect data for your project. You might even have to run a model over your data to generate needed labels. Here is the fundamental question:
+
+Does the data you've collected match the machine learning task and problem you have defined?
+
+2. Data inspection
+   ---------------
+
+The quality of your data will ultimately be the largest factor that affects how well you can expect your model to perform. As you inspect your data, look for:
+a. Outliers
+b. Missing or incomplete values
+c. Data that needs to be transformed or preprocessed so it's in the correct format to be used by your model
+
+3. Summary statistics
+   ------------------
+
+Models can make assumptions about how your data is structured.
+Now that you have some data in hand, it is a good best practice to check that your data is in line with the underlying assumptions of the machine learning model that you chose.
+Using statistical tools, you can calculate things like the mean, inner-quartile range (IQR), and standard deviation. These tools can give you insights into the scope, scale, and shape of a dataset.
+
+4. Data visualization
+   ------------------
+
+You can use data visualization to see outliers and trends in your data and to help stakeholders understand your data.
+
+===============
+IMPORTANT TERMS
+===============
+
+1. Impute is a common term referring to different statistical tools that can be used to calculate missing values from your dataset.
+   ``````
+2. Outliers are data points that are significantly different from other date in the same sample.
+   ````````
+
+
+C-> Modeling training
+=====================
+
+Modeling training is a process whereby the model's parameters are iteratively updated to minimize some loss function that has been previously defined.
+
+Splitting your dataset
+----------------------
+The first step in model training is to randomly split the dataset.
+This allows you to keep some data hidden during training, so that the data can be used to evaluate your model before you put it into production. Specifically, you do this to test against the bias-variance trade-off.
+
+Splitting your dataset gives you two sets of data:
+
+1. Training dataset: The data on which the model will be trained. Most of your data will be here. Many developers estimate about 80%.
+   `````````````````
+2. Test dataset: The data withheld from the model during training, which is used to test how well your model will generalize to new data.
+   `````````````
+
+The model training algorithm iteratively updates a model's parameters to minimize some loss function.
+
+Model parameters:- Model parameters are settings or configurations that the training algorithm can update to change how the model behaves. Depending on the context, you’ll also hear other `````````````````  specific terms used to describe model parameters such as weights and biases. Weights, which are values that change as the model learns, are more specific to neural 			   networks.
+Loss function:- A loss function is used to codify the model’s distance from a goal. For example, if you were trying to predict the number of snow cone sales based on the day’s weather, you ``````````````	would care about making predictions that are as accurate as possible. So you might define a loss function to be “the average distance between your model’s predicted number 		of snow cone sales and the correct number.” 
+
+
+The end-to-end training process is:
+-----------------------------------
+1. Feed the training data into the model.
+2. Compute the loss function on the results.
+3. Update the model parameters in a direction that reduces loss.
+
+You continue to cycle through these steps until you reach a predefined stop condition. This might be based on training time, the number of training cycles, or an even more intelligent or application-aware mechanism.
+
+======
+MODELS
+======
+
+1. Linear models
+----------------
+One of the most common models covered in introductory coursework, linear models simply describe the relationship between a set of input numbers and a set of output numbers through a linear function (think of y = mx + b or a line on a x vs y chart). Classification tasks often use a strongly related logistic model, which adds an additional transformation mapping the output of the linear function to the range [0, 1], interpreted as “probability of being in the target class.” Linear models are fast to train and give you a great baseline against which to compare more complex models. A lot of media buzz is given to more complex models, but for most new problems, consider starting with a simple model.
+
+2. Tree-based models
+--------------------
+Tree-based models are probably the second most common model type covered in introductory coursework. They learn to categorize or regress by building an extremely large structure of nested if/else blocks, splitting the world into different regions at each if/else block. Training determines exactly where these splits happen and what value is assigned at each leaf region. For example, if you’re trying to determine if a light sensor is in sunlight or shadow, you might train tree of depth 1 with the final learned configuration being something like if (sensor_value > 0.698), then return 1; else return 0;. The tree-based model XGBoost is commonly used as an off-the-shelf implementation for this kind of model and includes enhancements beyond what is discussed here. Try tree-based models to quickly get a baseline before moving on to more complex models.
+
+3. Deep learning models
+-----------------------
+Extremely popular and powerful, deep learning is a modern approach that is based around a conceptual model of how the human brain functions. The model (also called a neural network) is composed of collections of neurons (very simple computational units) connected together by weights (mathematical representations of how much information thst is allowed to flow from one neuron to the next). The process of training involves finding values for each weight. Various neural network structures have been determined for modeling different kinds of problems or processing different kinds of data.
+A short list of noteworthy examples includes:
+
+a) FFNN:-        The most straightforward way of structuring a neural network, the Feed Forward Neural Network (FFNN) structures neurons in a series of layers, with each neuron in a layer  
+                 containing weights to all neurons in the previous layer.
+b) CNN:-         Convolutional Neural Networks (CNN) represent nested filters over grid-organized data. They are by far the most commonly used type of model when processing images.
+c) RNN/LSTM:-    Recurrent Neural Networks (RNN) and the related Long Short-Term Memory (LSTM) model types are structured to effectively represent for loops in traditional computing,   	         collecting state while iterating over some object. They can be used for processing sequences of data.
+d) Transformer:- A more modern replacement for RNN/LSTMs, the transformer architecture enables training over larger datasets involving sequences of data.
+
+Machine learning using Python libraries
+---------------------------------------
+A. For more classical models (linear, tree-based) as well as a set of common ML-related tools, take a look at scikit-learn. The web documentation for this library is also organized for
+   those getting familiar with space and can be a great place to get familiar with some extremely useful tools and techniques.
+B. For deep learning, mxnet, tensorflow, and pytorch are the three most common libraries. For the purposes of the majority of machine learning needs, each of these is feature-paired and 
+   equivalent.
+
+Key terms
+---------
+
+Hyperparameters are settings on the model that are not changed during training but can affect how quickly or how reliably the model trains, such as the number of clusters the model should
+identify.
+
+Model parameters are settings or configurations the training algorithm can update to change how the model behaves.
+
+
+D-> Evaluating a trained model
+==============================
+
+After you have collected your data and trained a model, you can start to evaluate how well your model is performing.
+The metrics used for evaluation are likely to be very specific to the problem you defined. 
+
+Model accuracy is a fairly common evaluation metric. Accuracy is the fraction of predictions a model gets right.
+
+Every step we have gone through is highly iterative and can be changed or rescoped during the course of a project. At each step, you might find that you need to go back and reevaluate some assumptions you had in previous steps.
+
+Using Log Loss
+--------------
+
+Let's say you're trying to predict how likely a customer is to buy either a jacket or t-shirt.
+Log loss could be used to understand your model's uncertainty about a given prediction. In a single instance, your model could predict with 5% certainty that a customer is going to buy a t-shirt. In another instance, your model could predict with 80% certainty that a customer is going to buy a t-shirt. Log loss enables you to measure how strongly the model believes that its prediction is accurate.
+In both cases, the model predicts that a customer will buy a t-shirt, but the model's certainty about that prediction can change.
+
+
+E-> Model inference
+===================
+
+Once you have trained your model, have evaluated its effectiveness, and are satisfied with the results, you're ready to generate predictions on real-world problems using unseen data in the field. In machine learning, this process is often called inference.
+							 `````````
+Even after you deploy your model, you're always monitoring to make sure your model is producing the kinds of results that you expect. There may be times where you reinvestigate the data, modify some of the parameters in your model training algorithm, or even change the model type used for training.
+
+
+Summary of the 5 Steps
+======================
+
+1. Solving problems using machine learning is an evolving and iterative process.
+
+2. To solve a problem successfully in machine learning finding high quality data is essential.
+
+3. To evaluate models, you often use statistical metrics. The metrics you choose are tailored to a specific use case.
+
+
+
+
+Example 1: Predicting home prices
+=================================
+
+House price prediction is one of the most common examples used to introduce machine learning.
+
+Step 1: Define the problem
+--------------------------
+Problem:- Can we estimate the price of a house based on lot size or the number of bedrooms?
+
+You access the sale prices for recently sold homes or have them appraised. Since you have this data, this is a supervised learning task. You want to predict a continuous numeric value, so this task is also a regression task.
+
+Step 2: Build the dataset
+-------------------------
+For this project, you need data about home prices, so you do the following tasks:
+
+1. Data collection: You collect numerous examples of homes sold in your neighborhood within the past year, and pay a real estate appraiser to appraise the homes whose selling price is not
+   ```````````````` known.
+2. Data exploration: You confirm that all of your data is numerical because most machine learning models operate on sequences of numbers. If there is textual data, you need to transform it
+   ````````````````` into numbers.
+3. Data cleaning: Look for things such as missing information or outliers, such as the 10-room mansion. You can use several techniques to handle outliers, but you can also just remove them
+   `````````````` from your dataset.
+
+You also want to look for trends in your data, so you use data visualization to help you find them.
+
+You can plot home values against each of your input variables to look for trends in your data.
+
+Step 3: Model training
+----------------------
+Prior to actually training your model, you need to split your data. The standard practice is to put 80% of your dataset into a training dataset and 20% into a test dataset.
+
+Linear model selection:- As you see in the preceding chart, when lot size increases, home values increase too. This relationship is simple enough that a linear model can be used to ```````````````````````	 represent this relationship.
+			 A linear model across a single input variable can be represented as a line. It becomes a plane for two variables, and then a hyperplane for more than two 				 variables. The intuition, as a line with a constant slope, doesn't change.
+
+The Python scikit-learn library  has tools that can handle the implementation of the model training algorithm for you.
+
+Step 4: Model evaluation
+------------------------
+One of the most common evaluation metrics in a regression scenario is called root mean square or RMS. RMS can be thought of roughly as the "average error" across your test dataset, so you want this value to be low.
+You want the data points to be as close to the "average" line as possible, which would mean less net error.
+You compute the root mean square between your model’s prediction for a data point in your test dataset and the true value from your data.
+
+Interpreting Results:- In general, as your model improves, you see a better RMS result. You may still not be confident about whether the specific value you’ve computed is good or bad. 
+`````````````````````  Many machine learning engineers manually count how many predictions were off by a threshold (for example, $50,000 in this house pricing problem) to help determine 		       and verify the model's accuracy.
+
+Step 5: Model inference
+-----------------------
+Now you are ready to put your model into action.
+
+Terminology
+===========
+
+Regression:- A common task in supervised machine learning used to understand the relationship between multiple variables from a dataset.
+
+Hyperplane:- A mathematical term for a surface that contains more than two planes.
+
+
+
+Example 2: Microgenre Exploration
+=================================
+
+The machine learning process can be applied to an unsupervised machine learning task that uses book description text to identify different micro-genres.
+
+Step 1: Define the problem
+--------------------------
+Problem:- Is it possible to find clusters of similar books based on the presence of common words in the book descriptions?
+
+You do editorial work for a book recommendation company, and you want to write an article on the largest book trends of the year. You believe that a trend called "micro-genres" exists, and you have confidence that you can use the book description text to identify these micro-genres.
+
+By using an unsupervised machine learning technique called clustering, you can test your hypothesis that the book description text can be used to identify these "hidden" micro-genres.
+
+This machine learning task is especially useful when your data is not labeled.
+
+Step 2: Build your dataset
+--------------------------
+To test the hypothesis, you gather book description text for 800 romance books published in the current year. You plan to use this text as your dataset.
+
+Data exploration, cleaning, and preprocessing:-
+``````````````````````````````````````````````
+Sometimes it is necessary to change the format of the data that you want to use. In this case study, we need use a process called vectorization. Vectorization is a process whereby words are converted into numbers.
+
+Data cleaning and exploration:- For this project, you believe capitalization and verb tense will not matter, and therefore you remove capitals and convert all verbs to the same tense using a Python library built for processing human language. You also remove punctuation and words you don’t think have useful meaning, like 'a' and 'the'. The machine learning community refers to these words as stop words.
+
+Data preprocessing:- Before you can train the model, you need to do a type of data preprocessing called data vectorization, which is used to convert text into numbers. You transform the book description text into what is called a bag of words representation, so that it is understandable by machine learning models. 
+
+Step 3: Train the model
+-----------------------
+You pick a common cluster-finding model called k-means. In this model, you can change a model parameter, k, to be equal to how many clusters the model will try to find in your dataset.
+
+Your data is unlabeled and you don't how many micro-genres might exist. So, you train your model multiple times using different values for k each time.
+
+During the model evaluation phase, you plan on using a metric to find which value for k is the most appropriate.
+
+Step 4: Model evaluation
+------------------------
+In machine learning, numerous statistical metrics or methods are available to evaluate a model. In this use case, the silhouette coefficient is a good choice. This metric describes how well your data was clustered by the model. To find the optimal number of clusters, you plot the silhouette coefficient. For e.g.- You find the optimal value is when k=19.
+
+Step 5: Model inference
+-----------------------
+As you inspect the different clusters found when k=19, you find a surprisingly large cluster of books.
+
+3 key points for this example
+-----------------------------
+1. For some applications of machine learning, you need to not only clean and preprocess the data but also convert the data into a format that is machine readable. In this example, the words were converted into numbers through a process called data vectorization.
+2. Solving problems in machine learning requires iteration. In this example you saw how it was necessary to train the model multiples times for different values of k. After training your model over multiple iterations you saw how the silhouette coefficient could be use to determine the optimal value for k.
+3. During model inference you continued to inspect the clusters for accuracy to ensure that your model was generative useful predictions.
+
+
+Terminology
+===========
+
+Bag of words:- A technique used to extract features from text. It counts how many times a word appears in a document (corpus), and then transforms that information into a dataset.
+
+Data vectorization:- A process that converts non-numeric data into a numerical format so that it can be used by a machine learning model.
+
+Silhouette coefficients:- A score from -1 to 1 describing the clusters found during modeling. A score near zero indicates overlapping clusters, and scores less than zero indicate data points assigned to incorrect clusters. A score approaching 1 indicates successful identification of discrete non-overlapping clusters.
+
+Stop words:- A list of words removed by natural language processing tools when building your dataset. There is no single universal list of stop words used by all-natural language processing tools.
+
+
+
+Example 3: Using ML to detect spills
+====================================
+
+Step 1: Defining the problem
+----------------------------
+Imagine you run a company that offers specialized on-site janitorial services. One client - an industrial chemical plant - requires a fast response for spills and other health hazards. You realize if you could automatically detect spills using the plant's surveillance system, you could mobilize your janitorial team faster.
+
+Your goal will be to predict if each image belongs to one of the following classes:
+1. Contains spill
+2. Does not contain spill
+
+Step 2: Building a dataset
+--------------------------
+Collecting:- Using historical data, as well as safely staged spills, quickly build a collection of images that contain both spills and non-spills in multiple lighting conditions and environments.
+
+Exploring and cleaning:- Go through all of the photos to ensure that the spill is clearly in the shot. There are Python tools and other techniques available to improve image quality, which you can use later if you determine that you need to iterate.
+
+Data vectorization (converting to numbers):- Many models require numerical data, so you must transform all of your image data needs to be transformed into a numerical format. Python tools can help you do this automatically.
+Each pixel in the image can be represented using a number between 0 and 1, with 0 being completely black and 1 being completely white.
+
+Split the data:- Split your image data into a training dataset and a test dataset.
+
+Step 3: Model Training
+----------------------
+Traditionally, solving this problem would require hand-engineering features on top of the underlying pixels (for example, locations of prominent edges and corners in the image), and then training a model on these features.
+
+Today, deep neural networks are the most common tool used for solving this kind of problem. Many deep neural network models are structured to learn the features on top of the underlying pixels so you don’t have to learn them.
+
+CNN (convolutional neural network):- You can think of them as a collection of very simple models connected together. These simple models are called neurons, and the connections between these models are trainable model parameters called weights.
+Convolutional neural networks are a special type of neural network that is particularly good at processing images.
+
+Step 4: Model evaluation
+------------------------
+There are many different statistical metrics that you can use to evaluate your model.
+
+Here's a list of common metrics:
+1. Accuracy
+2. Confusion matrix
+3. F1 score
+4. False positive rate
+5. False negative rate
+6. Log loss
+7. Negative predictive value
+8. Precession
+9. Recall
+10. ROC Curve
+11. Specificity
+
+In cases such as this, accuracy might not be the best evaluation mechanism.
+
+Why not? The model will see the does not contain spill' class almost all the time, so any model that just predicts no spill most of the time will seem pretty accurate.
+
+What you really care about is an evaluation tool that rarely misses a real spill.
+
+This is a common problem and that precision and recall will be effective. Think of precision as answering the question, "Of all predictions of a spill, how many were right?" and recall as answering the question, "Of all actual spills, how many did we detect?"
+
+Manual evaluation plays an important role. If you are unsure if your staged spills are sufficiently realistic compared to actual spills, you can get a better sense how well your model performs with actual spills by finding additional examples from historical records. This allows you to confirm that your model is performing satisfactorily.
+
+Step 5: Model inference
+-----------------------
+The model can be deployed on a system that enables you to run machine learning workloads such as AWS Panorama.
+
+Thankfully, most of the time, the results will be from the class does not contain spill.
+
+But, when the class contains spill' is detected, a simple paging system could alert the team to respond.
+
+3 key points for this example
+-----------------------------
+1. For some applications of machine learning, you need to use more complicated techniques to solve the problem. While modern neural networks are a powerful tool, don’t forget their cost in terms of being easily explained.
+2. High quality data once again was very important to the success of this application, to the point where even staging some fake data was required. Once again, the process of data vectorization was required so it was important to convert the images into numbers so that they could be used by the neural network.
+3. During model inference you continued to inspect the predictions for accuracy. It is especially important in this case because you created some fake data to use when training your model.
+
+Terminology
+===========
+
+Neural networks:- a collection of very simple models connected together.
+	a) These simple models are called neurons.
+	b) The connections between these models are trainable model parameters called weights.
