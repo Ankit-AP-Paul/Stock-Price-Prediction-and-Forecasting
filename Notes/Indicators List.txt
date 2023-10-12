@@ -1,0 +1,38 @@
+Momentum Indicators
+-------------------
+MACD***
+RSI***
+Average Directional Index (ADX)***
+Rate of Change
+Stochastic***
+
+Trend Indicators
+----------------
+Moving Averages***
+Supertrend***
+Parabolic SAR
+
+Volume Indicators
+-----------------
+On-Balance indicator***
+Trader’s Lion Enhanced Volume
+Volume Price Trend Indicator
+Money flow index***
+Chaikin Money Flow Indicator
+Accumulation/distributionDonchian Channel 
+Ease of Movement
+Volume at Price
+Volume-Weighted Average Price*** 
+
+Volatility Indicators
+---------------------
+Bollinger Bands***
+Keltner Channel
+Donchian Channel
+Average True Range (ATR)
+
+Breadth Indicators
+------------------
+Percent/Number of Stocks above Moving Average
+Periodic High and Lows
+Advance/Decline
