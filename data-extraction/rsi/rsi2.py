@@ -17,6 +17,6 @@ def calc_rsi(data):
 
     RSI = 100.0 - (100.0 / (1.0 + relative_strength))
 
-    data['RSI'] = RSI
+    return RSI
 
     # print(data)
