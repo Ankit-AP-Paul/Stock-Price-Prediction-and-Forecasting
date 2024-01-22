@@ -23,3 +23,16 @@ def get_stock_db(stock_ticker: str):
         return {"message": f"{stock_ticker} not found"}
     except Exception as e:
         return {"message": f"An error occurred: {str(e)}"}
+
+
+@app.get("/get-stock-tickers")
+def get_stock_tickers():
+    try:
+        path = 'TICKERS.txt'
+        file = open(path, 'r')
+        tickers = []
+        for ticker in file:
+            tickers.append(ticker[:-1])
+        return json.loads(json.dumps(tickers))
+    except Exception as e:
+        return {"message": f"An error occurred: {str(e)}"}

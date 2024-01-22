@@ -5,8 +5,7 @@ from MovingAverage.MovingAverage import calculate_sma, calculate_exponential_smo
 
 
 def extractData(stock_ticker):
-    data = yf.download(tickers=stock_ticker, period='2y',
-                       prepost=True, actions=True)
+    data = yf.download(tickers=stock_ticker, period='2y', interval='1d')
     data['RSI'] = calc_rsi(data)
     data["SMA"] = calculate_sma(data.Close, window_size=100)
     data["EMA"] = calculate_exponential_smoothing(data.Close, span=10)
