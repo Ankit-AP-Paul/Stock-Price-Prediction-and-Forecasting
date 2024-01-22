@@ -5,6 +5,7 @@ from rsi.rsi2 import calc_rsi
 from MovingAverage.MovingAverage import calculate_sma, calculate_exponential_smoothing, double_EMA
 from adx.adx2 import extract_adx
 from bbands.bbands import calculate_bbands
+from macd.macd import calculate_macd
 
 
 def extractData(stock_ticker):
@@ -15,6 +16,8 @@ def extractData(stock_ticker):
     data["DEMA"] = double_EMA(data.Close, span=10)
     data[['DX', 'ADX']] = extract_adx(data)
     calculate_bbands(data)
+    calculate_macd(data)
+
     pd.DataFrame(data).to_csv(f'backend\data\{stock_ticker}.csv')
 
 
