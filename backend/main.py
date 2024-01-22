@@ -38,14 +38,14 @@ def get_stock_info(stock_ticker: str):
         return {"message": f"An error occurred: {str(e)}"}
 
 
-@app.get("/get-stock-tickers")
-def get_stock_tickers():
+@app.get("/get-companies")
+def get_companies():
     try:
-        path = 'TICKERS.txt'
-        file = open(path, 'r')
-        tickers = []
-        for ticker in file:
-            tickers.append(ticker[:-1])
-        return json.loads(json.dumps(tickers))
+        path = 'companies.csv'
+        df = pd.read_csv(path)
+        data = df.to_json(orient='records')
+        return json.loads(data)
+    except FileNotFoundError:
+        return {"message": f"companies.csv not found"}
     except Exception as e:
         return {"message": f"An error occurred: {str(e)}"}
