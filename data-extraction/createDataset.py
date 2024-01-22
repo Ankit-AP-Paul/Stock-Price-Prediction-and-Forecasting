@@ -6,6 +6,7 @@ from MovingAverage.MovingAverage import calculate_sma, calculate_exponential_smo
 from adx.adx2 import extract_adx
 from bbands.bbands import calculate_bbands
 from macd.macd import calculate_macd
+from stoch.stoch import calculate_stoch
 
 
 def extractData(stock_ticker):
@@ -17,6 +18,7 @@ def extractData(stock_ticker):
     data[['DX', 'ADX']] = extract_adx(data)
     calculate_bbands(data)
     calculate_macd(data)
+    calculate_stoch(data)
 
     pd.DataFrame(data).to_csv(f'backend\data\{stock_ticker}.csv')
 
