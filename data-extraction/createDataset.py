@@ -3,6 +3,7 @@ import yahoo_fin.stock_info as yf2
 import pandas as pd
 from rsi.rsi2 import calc_rsi
 from MovingAverage.MovingAverage import calculate_sma, calculate_exponential_smoothing, double_EMA
+from adx.adx2 import extract_adx
 
 
 def extractData(stock_ticker):
@@ -11,6 +12,8 @@ def extractData(stock_ticker):
     data["SMA"] = calculate_sma(data.Close, window_size=100)
     data["EMA"] = calculate_exponential_smoothing(data.Close, span=10)
     data["DEMA"] = double_EMA(data.Close, span=10)
+    data[['DX', 'ADX']] = extract_adx(data)
+    # extract_adx(data)
     pd.DataFrame(data).to_csv(f'backend\data\{stock_ticker}.csv')
 
 
@@ -24,4 +27,4 @@ def extractInfo(stock_ticker):
 file = open('data-extraction\TICKERS.txt', 'r')
 for ticker in file:
     extractData(ticker[:-1])
-    extractInfo(ticker[:-1])
+    # extractInfo(ticker[:-1])
