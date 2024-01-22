@@ -13,7 +13,6 @@ def extractData(stock_ticker):
     data["EMA"] = calculate_exponential_smoothing(data.Close, span=10)
     data["DEMA"] = double_EMA(data.Close, span=10)
     data[['DX', 'ADX']] = extract_adx(data)
-    # extract_adx(data)
     pd.DataFrame(data).to_csv(f'backend\data\{stock_ticker}.csv')
 
 
