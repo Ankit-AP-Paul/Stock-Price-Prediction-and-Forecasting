@@ -1,4 +1,5 @@
 import yfinance as yf
+import yahoo_fin.stock_info as yf2
 import pandas as pd
 from rsi.rsi2 import calc_rsi
 from MovingAverage.MovingAverage import calculate_sma, calculate_exponential_smoothing, double_EMA
@@ -13,6 +14,14 @@ def extractData(stock_ticker):
     pd.DataFrame(data).to_csv(f'backend\data\{stock_ticker}.csv')
 
 
+def extractInfo(stock_ticker):
+    data = yf2.get_quote_table(stock_ticker)
+    df = pd.DataFrame(data, index=[0])
+    df.insert(0, "Stock Ticker", stock_ticker)
+    df.to_csv(f'backend\stock_info\{stock_ticker}.csv', index=False)
+
+
 file = open('data-extraction\TICKERS.txt', 'r')
 for ticker in file:
     extractData(ticker[:-1])
+    extractInfo(ticker[:-1])

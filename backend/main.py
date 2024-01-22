@@ -25,6 +25,19 @@ def get_stock_db(stock_ticker: str):
         return {"message": f"An error occurred: {str(e)}"}
 
 
+@app.get("/get-stock-info")
+def get_stock_info(stock_ticker: str):
+    try:
+        path = f'stock_info/{stock_ticker}.csv'
+        df = pd.read_csv(path)
+        data = df.to_json(orient='records')
+        return json.loads(data)
+    except FileNotFoundError:
+        return {"message": f"{stock_ticker} not found"}
+    except Exception as e:
+        return {"message": f"An error occurred: {str(e)}"}
+
+
 @app.get("/get-stock-tickers")
 def get_stock_tickers():
     try:
