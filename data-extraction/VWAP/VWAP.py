@@ -1,14 +1,22 @@
 def calculate_vwap(data):
-    
-    total_price_volume = 0  # Sum of (price * volume)
-    total_volume = 0  # Total trading volume
+    required_columns = ['Volume', 'High', 'Low', 'Close']
+    if not set(required_columns).issubset(set(data.columns)):
+        raise ValueError(
+            "Input DataFrame must contain 'Volume', 'High', 'Low', and 'Close' columns.")
 
-    for price, volume in data:
-        total_price_volume += price * volume
-        total_volume += volume
+    relevant_data = data[['Volume', 'High', 'Low', 'Close']]
 
-    if total_volume == 0:
-        return None  # Avoid division by zero
+    relevant_data['Typical Price'] = (
+        relevant_data['High'] + relevant_data['Low'] + relevant_data['Close']) / 3
 
-    vwap = total_price_volume / total_volume
-    return vwap
+    relevant_data['Volume * Typical Price'] = relevant_data['Volume'] * \
+        relevant_data['Typical Price']
+
+    relevant_data['Cumulative Volume * Typical Price'] = relevant_data['Volume * Typical Price'].cumsum()
+    relevant_data['Cumulative Volume'] = relevant_data['Volume'].cumsum()
+
+    # Calculate VWAP
+    relevant_data['VWAP'] = relevant_data['Cumulative Volume * Typical Price'] / \
+        relevant_data['Cumulative Volume']
+
+    return relevant_data[['VWAP']]

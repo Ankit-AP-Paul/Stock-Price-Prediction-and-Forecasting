@@ -10,6 +10,4 @@ def calculate_bbands(df):
     df['Upper_Band'] = MA_30_Close + 2 * STD_20_Close
     df['Lower_Band'] = MA_30_Close - 2 * STD_20_Close
 
-    print(df)
-
-
+    # print(df)
