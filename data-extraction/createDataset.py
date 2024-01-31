@@ -11,9 +11,12 @@ from VWAP.VWAP import calculate_vwap
 
 
 def extractData(stock_ticker):
-    data = yf.download(tickers=stock_ticker, period='6mo', interval='1d')
+    data = yf.download(tickers=stock_ticker, period='5y',
+                       interval='1d')
     data['RSI'] = calc_rsi(data)
     data["SMA"] = calculate_sma(data.Close, window_size=100)
+    data['13MA'] = calculate_sma(data.Close, window_size=13)
+    data['30MA'] = calculate_sma(data.Close, window_size=30)
     data["EMA"] = calculate_exponential_smoothing(data.Close, span=10)
     data["DEMA"] = double_EMA(data.Close, span=10)
     data[['DX', 'ADX']] = extract_adx(data)
