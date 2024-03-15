@@ -19,7 +19,7 @@ def extractData(stock_ticker):
     data['30MA'] = calculate_sma(data.Close, window_size=30)
     data["EMA"] = calculate_exponential_smoothing(data.Close, span=10)
     data["DEMA"] = double_EMA(data.Close, span=10)
-    data[['DX', 'ADX']] = extract_adx(data)
+    data[['+DI', '-DI', 'DX', 'ADX']] = extract_adx(data)
     data['VWAP'] = calculate_vwap(data)
     calculate_bbands(data)
     calculate_macd(data)

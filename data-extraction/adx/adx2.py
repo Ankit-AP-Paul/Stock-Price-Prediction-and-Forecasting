@@ -208,5 +208,5 @@ def extract_adx(data):
     data.reset_index(drop=True, inplace=True)
     ADX = func(data)
     ADX.set_index('Date', inplace=True)
-    ADX_DATA = ADX[['DX', 'ADX']]
+    ADX_DATA = ADX[['+DI', '-DI', 'DX', 'ADX']]
     return ADX_DATA
