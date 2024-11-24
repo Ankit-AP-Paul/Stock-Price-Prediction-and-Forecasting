@@ -23,3 +23,7 @@ News Crawler Microservice - https://stokis-news-crawler-ms.vercel.app/
 News Sentiment Analysis Microservice - https://stokis-news-analyzer-ms.vercel.app/
 
 AI Chat Microservice - https://stokis-ai-chat-ms.vercel.app/
+
+## Architecture
+
+![image](https://github.com/user-attachments/assets/4ed5c9b2-7984-4767-9507-bf34cad9557b)
