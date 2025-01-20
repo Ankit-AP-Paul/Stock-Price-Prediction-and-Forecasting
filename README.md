@@ -36,4 +36,4 @@ AI Chat Microservice - https://stokis-ai-chat-ms.vercel.app/
 
 ## Architecture
 
-![image](https://github.com/user-attachments/assets/4ed5c9b2-7984-4767-9507-bf34cad9557b)
+![Image](https://github.com/user-attachments/assets/c543e77d-7cf5-4f46-9762-4164bc81f6a1)
