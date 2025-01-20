@@ -1,0 +1,72 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8000"
+    environment:
+      - SERVICE_NAME=backend
+    networks:
+      - microservices-network
+
+  ai-chat-ms:
+    build:
+      context: ./ai-chat-ms
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8000"
+    environment:
+      - SERVICE_NAME=ai-chat-ms
+    networks:
+      - microservices-network
+
+  data-generation-ms:
+    build:
+      context: ./data-generation-ms
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8000"
+    environment:
+      - SERVICE_NAME=data-generation-ms
+    networks:
+      - microservices-network
+
+  news-analyzer-ms:
+    build:
+      context: ./news-analyzer-ms
+      dockerfile: Dockerfile
+    ports:
+      - "8004:8000"
+    environment:
+      - SERVICE_NAME=news-analyzer-ms
+    networks:
+      - microservices-network
+
+  news-crawler-ms:
+    build:
+      context: ./news-crawler-ms
+      dockerfile: Dockerfile
+    ports:
+      - "8005:8000"
+    environment:
+      - SERVICE_NAME=news-crawler-ms
+    networks:
+      - microservices-network
+
+  prediction-ms:
+    build:
+      context: ./prediction-ms
+      dockerfile: Dockerfile
+    ports:
+      - "8006:8000"
+    environment:
+      - SERVICE_NAME=prediction-ms
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge

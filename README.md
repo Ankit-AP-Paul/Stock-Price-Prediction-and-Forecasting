@@ -3,12 +3,22 @@
 ## How to run locally
 
 ```bash
-cd <folder name>
-pip install -r requirements.txt
-uvicorn src.main:app --reload
+docker compose up --build
 ```
 
-App will run on [localhost:8000](http://localhost:8000/)
+Backend will run on [localhost:8001](http://localhost:8001/)
+
+AI-Chat-MS will run on [localhost:8002](http://localhost:8002/)
+
+Data-Generation-MS will run on [localhost:8003](http://localhost:8003/)
+
+News-Analyzer-MS will run on [localhost:8004](http://localhost:8004/)
+
+News-Crawler-MS will run on [localhost:8005](http://localhost:8005/)
+
+Prediction-MS will run on [localhost:8006](http://localhost:8006/)
+
+To view swagger documentation visit: `/docs`
 
 ## Deployment Links
 
