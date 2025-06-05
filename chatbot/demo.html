@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Chatbot with Stock Plot Images</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .chat-message {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+      .user-message {
+        background-color: #3b82f6;
+        color: white;
+        margin-left: auto;
+        max-width: 70%;
+      }
+      .bot-message {
+        background-color: #f3f4f6;
+        color: #1f2937;
+        margin-right: auto;
+        max-width: 80%;
+      }
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .plot-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+      <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">
+        📈 Finance LLM Chatbot with Stock Plot Visualization
+      </h1>
+
+      <!-- API Status -->
+      <div
+        id="status"
+        class="mb-6 p-4 rounded-lg bg-yellow-100 border-l-4 border-yellow-500"
+      >
+        <p class="text-yellow-700">Checking API status...</p>
+      </div>
+
+      <!-- Chat Interface -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Chat Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold mb-4">💬 Chat with AI</h2>
+
+          <!-- Quick Test Buttons -->
+          <div class="mb-4">
+            <h3 class="text-sm font-medium text-gray-700 mb-2">
+              Quick Test Questions:
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <button
+                onclick="sendQuickMessage('What is the current price of TCS?')"
+                class="px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
+              >
+                TCS Price
+              </button>
+              <button
+                onclick="sendQuickMessage('Compare TCS and Infosys')"
+                class="px-3 py-1 bg-green-500 text-white text-sm rounded hover:bg-green-600"
+              >
+                Compare Stocks
+              </button>
+              <button
+                onclick="sendQuickMessage('How has SBI performed over 6 months?')"
+                class="px-3 py-1 bg-purple-500 text-white text-sm rounded hover:bg-purple-600"
+              >
+                SBI Performance
+              </button>
+              <button
+                onclick="sendQuickMessage('What are moving averages of Wipro?')"
+                class="px-3 py-1 bg-orange-500 text-white text-sm rounded hover:bg-orange-600"
+              >
+                Wipro Analysis
+              </button>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div
+            id="chatMessages"
+            class="h-64 overflow-y-auto mb-4 border rounded-lg p-4 bg-gray-50"
+          >
+            <div class="bot-message chat-message">
+              <p>
+                👋 Hello! I'm your Finance AI assistant. Ask me about Indian
+                stock prices, analysis, comparisons, or performance!
+              </p>
+              <p class="text-sm text-gray-600 mt-1">
+                Try asking: "Compare TCS and Infosys" to see plot generation in
+                action!
+              </p>
+            </div>
+          </div>
+
+          <!-- Input Area -->
+          <div class="flex gap-2">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Ask about Indian stocks (TCS, INFY, RELIANCE, SBI, etc.)"
+              class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              onclick="sendMessage()"
+              class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-semibold">📊 Generated Stock Plots</h2>
+            <button
+              onclick="refreshImages()"
+              class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
+            >
+              🔄 Refresh
+            </button>
+          </div>
+
+          <div id="imageGallery" class="space-y-4">
+            <div class="text-gray-500 text-center py-8">
+              <p>📈 No plots yet!</p>
+              <p class="text-sm">
+                Ask questions about stock comparisons or performance to generate
+                beautiful visualizations!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="mt-8 bg-blue-50 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-blue-800 mb-3">🚀 How to Use:</h3>
+        <ul class="text-blue-700 space-y-2">
+          <li>
+            <strong>📈 Stock Prices:</strong> "What is the current price of
+            TCS?"
+          </li>
+          <li>
+            <strong>⚖️ Compare Stocks:</strong> "Compare TCS and Infosys"
+            (generates comparison plot)
+          </li>
+          <li>
+            <strong>📊 Performance Analysis:</strong> "How has SBI performed
+            over 6 months?" (generates performance plot)
+          </li>
+          <li>
+            <strong>📉 Technical Analysis:</strong> "What are the moving
+            averages of Wipro?" (generates technical plot)
+          </li>
+        </ul>
+        <p class="text-blue-600 mt-3 text-sm">
+          <strong>Note:</strong> Images will appear in the gallery after
+          questions that trigger plot generation!
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const API_BASE_URL = "http://localhost:8001";
+      const IMAGE_SERVER_URL = "http://localhost:8002";
+
+      // Check API status on load
+      async function checkAPIStatus() {
+        const statusDiv = document.getElementById("status");
+        try {
+          const [apiResponse, imageResponse] = await Promise.all([
+            fetch(`${API_BASE_URL}/health`),
+            fetch(`${IMAGE_SERVER_URL}/`),
+          ]);
+
+          if (apiResponse.ok && imageResponse.ok) {
+            statusDiv.innerHTML =
+              '<p class="text-green-700">✅ Both Chat API and Image Server are running!</p>';
+            statusDiv.className =
+              "mb-6 p-4 rounded-lg bg-green-100 border-l-4 border-green-500";
+          } else {
+            throw new Error("One or more APIs not responding");
+          }
+        } catch (error) {
+          statusDiv.innerHTML =
+            '<p class="text-red-700">❌ API servers not running. Please start both servers.</p>';
+          statusDiv.className =
+            "mb-6 p-4 rounded-lg bg-red-100 border-l-4 border-red-500";
+        }
+      }
+
+      // Send message to chat API
+      async function sendMessage() {
+        const input = document.getElementById("messageInput");
+        const message = input.value.trim();
+        if (!message) return;
+
+        const chatMessages = document.getElementById("chatMessages");
+
+        // Add user message
+        addMessage(message, true);
+        input.value = "";
+
+        try {
+          const response = await fetch(`${API_BASE_URL}/chat`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message: message }),
+          });
+
+          const data = await response.json();
+
+          // Add bot response
+          addMessage(data.response, false);
+
+          // Check for new images after a brief delay (to allow plot generation)
+          setTimeout(refreshImages, 2000);
+        } catch (error) {
+          addMessage(
+            "Sorry, I encountered an error. Please check if the API server is running.",
+            false
+          );
+        }
+      }
+
+      // Quick message sender
+      function sendQuickMessage(message) {
+        document.getElementById("messageInput").value = message;
+        sendMessage();
+      }
+
+      // Add message to chat
+      function addMessage(text, isUser) {
+        const chatMessages = document.getElementById("chatMessages");
+        const messageDiv = document.createElement("div");
+        messageDiv.className = `chat-message ${
+          isUser ? "user-message" : "bot-message"
+        }`;
+        messageDiv.innerHTML = `<p>${text}</p>`;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      // Refresh images from server
+      async function refreshImages() {
+        const gallery = document.getElementById("imageGallery");
+
+        try {
+          const response = await fetch(`${IMAGE_SERVER_URL}/images`);
+          const data = await response.json();
+
+          if (data.images && data.images.length > 0) {
+            gallery.innerHTML = data.images
+              .map(
+                (image) => `
+                        <div class="border rounded-lg p-3 bg-gray-50">
+                            <img src="${image.url}" alt="${
+                  image.description || image.filename
+                }" 
+                                 class="plot-image mb-2">
+                            <div class="flex justify-between items-center">
+                                <p class="text-sm text-gray-700 font-medium">${
+                                  image.description || image.filename
+                                }</p>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">${
+                                  image.type
+                                }</span>
+                            </div>
+                        </div>
+                    `
+              )
+              .join("");
+          } else {
+            gallery.innerHTML = `
+                        <div class="text-gray-500 text-center py-8">
+                            <p>📈 No plots yet!</p>
+                            <p class="text-sm">Ask questions about stock comparisons or performance to generate visualizations!</p>
+                        </div>
+                    `;
+          }
+        } catch (error) {
+          console.error("Error refreshing images:", error);
+          gallery.innerHTML =
+            '<p class="text-red-500">Error loading images</p>';
+        }
+      }
+
+      // Handle Enter key in input
+      document
+        .getElementById("messageInput")
+        .addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            sendMessage();
+          }
+        });
+
+      // Initialize
+      checkAPIStatus();
+      refreshImages();
+    </script>
+  </body>
+</html>
