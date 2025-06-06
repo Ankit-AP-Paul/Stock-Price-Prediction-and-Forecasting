@@ -9,10 +9,11 @@ from dotenv import load_dotenv
 def generate_stock_data(ticker: str):
 
     load_dotenv()
-
+    
+    print(f"Generating data for {ticker}")
     data = yf.download(
     tickers=ticker, 
-    period="max", 
+    period="5y",
     interval="1d", 
     auto_adjust=True, 
     prepost=True, 

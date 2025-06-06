@@ -1,0 +1,79 @@
+ticker,company,website,sector,1y_target_est,52_week_high,52_week_low,ask,beta_5_monthly,bid,eps,earning_date,ex_dividend_range,forward_dividend,yield,market_cap,pe_ratio,quote_price,prediction
+TATAMOTORS.NS,Tata Motors Limited,https://www.tatamotors.com,Consumer Cyclical,800.4839,1179.0,535.75,704.75,1.147,704.7,64.98,2025-05-13,2025-06-04,6.0,0.84,2596902010880,10.855648,705.4,Buy
+MARUTI.NS,Maruti Suzuki India Limited,https://www.marutisuzuki.com,Consumer Cyclical,13607.718,13680.0,10725.0,12128.0,0.224,12118.0,460.79,2025-04-25,2025-07-31,135.0,1.11,3824710057984,26.320015,12128.0,Buy
+EICHERMOT.NS,Eicher Motors Limited,https://www.eichermotors.com,Consumer Cyclical,5509.8335,5906.5,4508.75,5280.0,0.181,5276.5,172.53,2025-05-14,2024-08-07,51.0,0.96,1450505142272,30.591782,5278.0,Buy
+M&M.NS,Mahindra & Mahindra Limited,https://www.mahindra.com,Consumer Cyclical,3562.4324,3270.95,2425.0,3045.1,0.58,3043.3,114.97,2025-05-05,2025-07-03,25.3,0.83,3663570927616,26.459948,3042.1,Strong Buy
+BAJAJ-AUTO.NS,Bajaj Auto Limited,https://www.bajajauto.com,Consumer Cyclical,9288.385,12774.0,7089.35,8564.0,0.804,8552.0,261.86,2025-05-29,2025-06-20,210.0,2.45,2390335422464,32.67013,8555.0,Hold
+TVSMOTOR.NS,TVS Motor Company Limited,https://www.tvsmotor.com,Consumer Cyclical,2822.861,2958.0,2171.4,2714.8,-0.039,2713.6,46.47,2025-04-28,2025-03-26,10.0,0.37,1308698738688,58.394665,2713.6,
+NESTLEIND.NS,Nestlé India Limited,https://www.nestle.in,Consumer Defensive,2426.2703,2778.0,2110.0,2402.8,0.204,2402.7,33.38,2025-07-24,2025-07-03,40.0,1.67,2316579897344,71.980225,2402.7,Hold
+TATACONSUM.NS,Tata Consumer Products Limited,https://www.tataconsumer.com,Consumer Defensive,1225.8077,1247.099,882.9,1113.0,0.482,1112.8,13.01,2025-04-23,2025-05-29,8.25,0.74,1112804294656,85.54189,1112.9,Buy
+HINDUNILVR.NS,Hindustan Unilever Limited,https://www.hul.co.in,Consumer Defensive,2525.5642,3035.0,2136.0,2381.3,0.367,2382.1,45.39,2025-04-24,2025-06-23,48.0,2.02,5597428187136,52.48513,2382.3,Buy
+VBL.NS,Varun Beverages Limited,https://www.varunbeverages.com,Consumer Defensive,628.5417,681.12,419.55,475.0,0.182,474.75,8.43,2025-04-30,2025-05-07,1.5,0.32,1606412009472,56.34638,475.0,Strong Buy
+COLPAL.NS,Colgate-Palmolive (India) Limited,https://www.colgatepalmolive.co.in,Consumer Defensive,2625.8438,3890.0,2311.5,2452.0,0.328,2451.0,52.74,2025-05-21,2025-05-28,54.0,2.2,673988214784,46.473263,2451.0,Hold
+BRITANNIA.NS,Britannia Industries Limited,https://britannia.co.in,Consumer Defensive,5781.3613,6469.9,4506.0,5619.5,0.528,5616.5,90.72,2025-05-08,2025-08-04,75.0,1.34,1353196371968,61.926807,5618.0,Buy
+TITAN.NS,Titan Company Limited,https://www.titancompany.in,Consumer Cyclical,3800.853,3867.0,2925.0,3495.9,0.344,3494.4,37.49,2025-05-08,2024-06-27,11.0,0.31,3101020389376,93.24886,3495.9,Buy
+HDFCBANK.NS,HDFC Bank Limited,https://www.hdfcbank.com,Financial Services,2164.5366,1978.9,1552.05,1949.1,0.571,1947.5,92.4,2025-04-19,2025-06-26,22.0,1.13,14931743211520,21.094154,1949.1,Strong Buy
+ICICIBANK.NS,ICICI Bank Limited,https://www.icicibank.com,Financial Services,1611.4524,1471.6,1099.45,1446.3,0.467,1445.7,71.12,2025-04-19,2024-08-12,10.0,0.7,10312090648576,20.327614,1445.7,Strong Buy
+KOTAKBANK.NS,Kotak Mahindra Bank Limited,https://www.kotak.com,Financial Services,2281.8948,2301.9,1679.05,2041.3,0.361,2041.2,111.38,2025-05-03,2024-07-19,2.0,0.1,4071352434688,18.327349,2041.3,Buy
+AXISBANK.NS,Axis Bank Limited,https://www.axisbank.com,Financial Services,1365.7906,1339.65,933.5,1157.9,0.509,1157.6,90.17,2025-04-24,2025-07-03,1.0,0.09,3626436657152,12.837973,1157.6,Buy
+INDUSINDBK.NS,IndusInd Bank Limited,https://www.indusind.com,Financial Services,796.0244,1550.0,606.0,811.45,0.672,811.65,33.01,2025-05-21,2024-06-28,16.5,2.05,641612185600,24.607695,812.3,Hold
+SBIN.NS,State Bank of India,https://www.sbi.co.in,Financial Services,930.2125,899.0,680.0,806.75,0.521,806.65,86.89,2025-05-03,2025-05-16,15.9,1.97,7205746114560,9.286454,806.9,Buy
+BANKBARODA.NS,Bank of Baroda Limited,https://www.bankofbaroda.in,Financial Services,263.9697,290.5,190.7,244.37,0.494,244.1,40.05,2025-05-06,2025-06-06,8.35,3.33,1282326921216,6.0951314,244.11,Buy
+IOB.NS,Indian Overseas Bank,https://www.iob.in,Financial Services,,72.6,33.5,41.09,0.213,41.1,1.79,2025-05-02,2014-06-19,,,798636441600,22.88827,40.97,
+PNB.NS,Punjab National Bank,https://www.pnbindia.in,Financial Services,109.82353,130.19,85.46,109.6,0.5,109.59,16.42,2025-05-07,2025-06-20,2.9,2.66,1264597598208,6.6747866,109.6,Hold
+UNIONBANK.NS,Union Bank of India,https://www.unionbankofindia.co.in,Financial Services,147.90909,158.65,100.81,152.74,0.964,152.7,23.61,2025-05-08,2024-07-19,3.6,2.36,1168628776960,6.460821,152.54,Buy
+ULTRACEMCO.NS,UltraTech Cement Limited,https://www.ultratechcement.com,Basic Materials,12970.65,12339.0,9965.0,11169.0,0.418,11167.0,205.33,2025-04-28,2024-07-30,70.0,0.63,3285339078656,54.395363,11169.0,Buy
+SHREECEM.NS,Shree Cement Limited,https://www.shreecement.com,Basic Materials,29963.846,31920.0,23500.0,29650.0,0.164,29635.0,309.91,2025-05-14,2025-02-05,105.0,0.36,1069431980032,95.64067,29640.0,Hold
+AMBUJACEM.NS,Ambuja Cements Limited,https://www.ambujacement.com,Basic Materials,614.6579,706.95,453.05,551.45,-0.069,551.5,16.94,2025-04-29,2025-06-12,2.0,0.36,1364461223936,32.57084,551.75,Buy
+JSWSTEEL.NS,JSW Steel Limited,https://www.jswsteel.in,Basic Materials,1039.2059,1074.9,854.15,971.8,0.713,970.75,14.34,2025-05-23,2025-07-08,2.8,0.29,2371536551936,67.76499,971.75,Buy
+TATASTEEL.NS,Tata Steel Limited,https://www.tatasteel.com,Basic Materials,161.4,184.6,122.62,155.79,1.117,155.74,2.73,2025-05-12,2025-06-06,3.6,2.28,1945942622208,57.076927,155.82,Buy
+JSL.NS,Jindal Stainless Limited,https://www.jindalstainless.com,Basic Materials,731.4167,848.0,496.6,682.0,0.555,682.0,30.44,2025-05-08,2025-02-07,3.0,0.45,561829707776,22.414585,682.3,Strong Buy
+HINDALCO.NS,Hindalco Industries Limited,https://www.hindalco.com,Basic Materials,751.3929,772.65,546.45,637.75,1.022,637.85,71.88,2025-05-20,2024-08-09,3.5,0.55,1427164758016,8.8766,638.05,Buy
+JINDALSTEL.NS,Jindal Steel & Power Limited,https://www.jindalsteel.com,Basic Materials,991.25,1097.0,723.35,956.0,0.851,955.4,27.83,2025-04-30,2024-08-22,2.0,0.21,968787427328,34.35501,956.1,Buy
+HINDZINC.NS,Hindustan Zinc Limited,https://www.hzlindia.com,Basic Materials,447.30768,717.0,378.15,501.2,0.609,501.65,24.48,2025-04-25,2024-08-28,35.0,7.12,2120476786688,20.50041,501.85,
+VEDL.NS,Vedanta Limited,https://www.vedantalimited.com,Basic Materials,511.6,526.95,363.0,442.45,0.888,442.5,40.53,2025-04-30,2024-12-24,43.5,9.91,1728876380160,10.922774,442.7,Buy
+COALINDIA.NS,Coal India Limited,https://www.coalindia.in,Energy,440.82608,543.55,349.25,399.6,0.033,399.3,57.38,2025-05-07,2025-01-31,31.6,8.0,2462010572800,6.962356,399.5,Buy
+BHARTIARTL.NS,Bharti Airtel Limited,https://www.airtel.in,Communication Services,1987.9714,1917.0,1363.15,1874.0,0.113,1874.5,55.99,2025-05-13,2024-08-07,8.0,0.43,11217304289280,33.48276,1874.7,Buy
+DMART.NS,Avenue Supermarts Limited,https://www.dmartindia.com,Consumer Defensive,4005.3103,5484.85,3340.0,4173.0,0.31,4170.0,41.54,2025-05-03,,,,2714858160128,100.43331,4172.0,Hold
+TRENT.NS,Trent Limited,https://trentlimited.com,Consumer Cyclical,6079.7827,8345.0,4488.0,5625.0,0.115,5621.5,43.68,2025-04-29,2025-06-11,5.0,0.09,1999614377984,128.77747,5625.0,Buy
+DLF.NS,DLF Limited,https://www.dlf.in,Real Estate,925.26086,929.0,601.2,829.75,0.411,830.5,17.67,2025-05-19,2024-07-31,5.0,0.61,2056116371456,47.009056,830.65,Strong Buy
+GODREJPROP.NS,Godrej Properties Limited,https://www.godrejproperties.com,Real Estate,2760.5,3402.7,1900.0,2350.7,0.503,2349.8,49.01,2025-05-02,2015-07-27,,,706278785024,47.84738,2345.0,Buy
+OBEROIRLTY.NS,Oberoi Realty Limited,https://www.oberoirealty.com,Real Estate,1893.6666,2343.65,1451.95,1814.6,0.287,1811.6,61.23,2025-04-28,2025-05-05,12.0,0.67,659064946688,29.603136,1812.6,Buy
+LODHA.NS,Macrotech Developers Limited,https://www.lodhagroup.in,Real Estate,1447.1666,1649.95,1035.15,1470.9,0.306,1471.1,27.63,2025-04-24,2024-08-16,2.25,0.15,1468478390272,53.26457,1471.7,Buy
+LT.NS,Larsen & Toubro Limited,https://www.larsentoubro.com,Industrials,3979.5151,3963.5,2965.3,3646.8,0.461,3647.9,109.28,2025-05-08,2025-06-03,34.0,0.93,5021147070464,33.40959,3651.0,Buy
+HAL.NS,Hindustan Aeronautics Limited,https://hal-india.co.in,Industrials,5585.4443,5674.75,3046.05,5027.5,0.603,5028.6,125.27,2025-05-14,2025-02-18,38.0,0.75,3361998635008,40.13012,5027.1,Buy
+TCS.NS,Tata Consultancy Services Limited,https://www.tcs.com,Technology,3827.6223,4592.25,3056.05,3364.9,0.398,3365.1,134.17,2025-04-10,2025-06-04,60.0,1.78,12209909399552,25.079376,3364.9,Buy
+INFY.NS,Infosys Limited,https://www.infosys.com,Technology,1639.5814,2006.45,1307.0,1550.2,0.533,1550.0,65.13,2025-04-17,2025-05-30,63.0,4.05,6424482545664,23.800093,1550.1,Buy
+HCLTECH.NS,HCL Technologies Limited,https://www.hcltech.com,Technology,1662.909,2012.2,1302.75,1627.5,0.384,1627.4,64.15,2025-04-22,2025-04-28,72.0,4.41,4408750899200,25.370226,1627.5,Hold
+WIPRO.NS,Wipro Limited,https://www.wipro.com,Technology,247.65115,324.6,228.0,247.82,0.736,247.81,12.52,2025-04-16,2025-01-28,6.0,2.42,2594816131072,19.796326,247.85,
+TECHM.NS,Tech Mahindra Limited,https://www.techmahindra.com,Technology,1538.0476,1807.7,1209.4,1557.4,0.478,1557.2,47.98,2025-04-24,2025-07-03,45.0,2.88,1377891778560,32.453106,1557.1,Buy
+LTIM.NS,LTIMindtree Limited,https://www.ltimindtree.com,Technology,4896.0513,6767.95,3802.0,5170.5,0.561,5167.5,154.93,2025-04-23,2025-05-23,65.0,1.25,1531731378176,33.36991,5170.0,
+ADANIPORTS.NS,Adani Ports and Special Economic Zone Limited,https://www.adaniports.com,Industrials,1622.25,1604.95,995.65,1460.5,0.374,1459.1,51.42,2025-08-05,2025-06-12,7.0,0.48,3157476507648,28.426682,1461.7,Strong Buy
+GRASIM.NS,Grasim Industries Limited,https://www.grasim.com,Basic Materials,3074.1,2877.75,2276.95,2553.4,0.233,2553.8,55.43,2025-05-22,2024-08-06,10.0,0.39,1733347770368,46.094173,2555.0,Buy
+ITC.NS,ITC Limited,https://www.itcportal.com,Consumer Defensive,500.5263,528.5,390.15,420.1,0.055,420.05,15.76,2025-05-22,2025-05-28,15.7,3.75,5257173663744,26.656092,420.1,Strong Buy
+SUNPHARMA.NS,Sun Pharmaceutical Industries Limited,https://www.sunpharma.com,Healthcare,1981.4445,1960.35,1460.9,1681.0,0.38,1680.3,45.61,2025-05-22,2025-07-04,11.0,0.65,4030154670080,36.82745,1679.7,Buy
+DIVISLAB.NS,Divi's Laboratories Limited,https://www.divislabs.com,Healthcare,6364.7334,6764.0,4395.3,6540.0,0.342,6537.0,82.86,2025-05-17,2025-07-24,30.0,0.45,1735636287488,78.904175,6538.0,Hold
+CIPLA.NS,Cipla Limited,https://www.cipla.com,Healthcare,1648.6666,1702.05,1335.0,1490.6,0.158,1490.4,65.25,2025-05-13,2025-06-27,13.0,0.87,1203781107712,22.84138,1490.4,Buy
+DRREDDY.NS,Dr. Reddy's Laboratories Limited,https://www.drreddys.com,Healthcare,1276.6685,1421.49,1020.0,1301.0,0.386,1300.6,67.76,2025-05-09,2025-07-09,8.0,0.62,1082677723136,19.203068,1301.2,Hold
+APOLLOHOSP.NS,Apollo Hospitals Enterprise Limited,https://www.apollohospitals.com,Healthcare,7889.6895,7545.35,5965.45,6821.0,0.281,6818.5,100.39,2025-05-30,2025-08-18,20.0,0.29,980397981696,67.92011,6818.5,Buy
+MANKIND.NS,Mankind Pharma Limited,https://www.mankindpharma.com,Healthcare,2712.4707,3054.8,1901.05,2368.9,0.485,2369.0,49.07,2025-05-21,,,,977617616896,48.27797,2369.0,Buy
+BAJFINANCE.NS,Bajaj Finance Limited,https://www.aboutbajajfinserv.com/finance-about-us,Financial Services,9320.383,9660.0,6425.0,8909.0,0.553,8906.5,268.02,2025-04-29,2025-05-30,44.0,0.49,5565393141760,33.26058,8914.5,Buy
+LICI.NS,Life Insurance Corporation of India,https://www.licindia.in,Financial Services,1074.7142,1222.0,715.3,956.3,0.552,955.95,76.15,2025-05-27,2025-07-24,12.0,1.25,6049230225408,12.5594225,956.4,Buy
+BAJAJFINSV.NS,Bajaj Finserv Ltd.,https://www.bajajfinserv.in,Financial Services,2034.1428,2135.0,1523.25,1931.3,0.65,1930.9,55.02,2025-04-29,2025-06-26,1.0,0.05,3098540507136,35.09633,1931.0,
+JIOFIN.NS,Jio Financial Services Limited,https://www.jfs.in,Financial Services,272.0,368.3,198.65,291.7,,291.8,2.54,2025-04-17,,,,1853846192128,114.88189,291.8,
+HDFCLIFE.NS,HDFC Life Insurance Company Limited,https://www.hdfclife.com,Financial Services,820.0857,791.1,553.5,755.45,0.708,755.15,8.38,2025-04-17,2025-06-19,2.1,0.28,1628214132736,90.19689,755.85,Buy
+SBILIFE.NS,SBI Life Insurance Company Limited,https://www.sbilife.co.in,Financial Services,1949.3715,1936.0,1372.55,1765.7,0.448,1764.6,24.14,2025-04-24,2025-03-07,2.7,0.15,1769902309376,73.14416,1765.7,Strong Buy
+CHOLAFIN.NS,Cholamandalam Investment and Finance Company Limited,https://www.cholamandalam.com,Financial Services,1617.8823,1684.4,1168.0,1502.1,0.659,1503.3,50.64,2025-04-25,2025-07-23,1.4,0.09,1265937809408,29.699842,1504.0,Buy
+NTPC.NS,NTPC Limited,https://www.ntpc.co.in,Utilities,415.72,448.45,292.8,330.45,0.229,330.4,20.34,2025-05-24,2025-01-31,11.5,3.5,3210113449984,16.243855,330.4,Buy
+POWERGRID.NS,Power Grid Corporation of India Limited,https://www.powergrid.in,Utilities,324.5,366.25,247.3,294.75,0.258,294.85,16.39,2025-05-19,2025-02-07,15.0,5.1,2744607047680,18.004883,295.1,Buy
+ADANIGREEN.NS,Adani Green Energy Limited,https://www.adanigreenenergy.com,Utilities,1232.4286,2091.0,758.0,1014.5,0.809,1014.3,8.33,2025-04-28,,,,1649323802624,121.81273,1014.7,Strong Buy
+SUPREMEIND.NS,The Supreme Industries Limited,https://www.supreme.co.in,Industrials,4023.28,6460.0,3095.0,4293.0,0.425,4291.2,75.74,2025-04-24,2025-06-19,34.0,0.78,545873100800,56.737522,4297.3,
+RELIANCE.NS,Reliance Industries Limited,https://www.ril.com,Energy,1570.1143,1608.8,1114.85,1440.1,0.332,1439.9,51.06,2025-04-25,2024-08-19,5.0,0.35,19486799298560,28.202114,1440.0,Buy
+ONGC.NS,Oil and Natural Gas Corporation Limited,https://www.ongcindia.com,Energy,283.36667,345.0,205.0,238.5,0.339,238.45,28.79,2025-05-21,2025-02-07,17.5,7.36,3004686925824,8.28621,238.56,Buy
+IOC.NS,Indian Oil Corporation Limited,https://www.iocl.com,Energy,155.5,185.97,110.72,140.52,0.764,140.51,9.87,2025-04-30,2024-07-12,15.0,10.77,2004557758464,14.236069,140.51,Buy
+POLYCAB.NS,Polycab India Limited,https://www.polycab.com,Industrials,6770.517,7605.0,4555.0,5989.5,0.427,5985.5,133.96,2025-05-06,2024-07-09,30.0,0.5,900832165888,44.70364,5988.5,Buy
+HAVELLS.NS,Havells India Limited,https://www.havells.com,Industrials,1800.8649,2106.0,1381.3,1493.4,0.37,1493.9,23.51,2025-04-22,2025-05-23,10.0,0.67,944678502400,63.589962,1495.0,Buy
+SIEMENS.NS,Siemens Limited,https://www.siemens.com/in/en.html,Industrials,3699.6875,8129.9,2450.0,3317.4,0.507,3316.0,68.23,2025-05-13,2025-01-30,12.0,0.37,1193471770624,48.68826,3322.0,Buy
+BERGEPAINT.NS,Berger Paints India Limited,https://www.bergerpaints.com,Basic Materials,537.4762,629.5,437.75,574.85,0.487,574.6,10.13,2025-05-14,2024-08-05,3.5,0.6,670386749440,56.762093,575.0,Hold
+ASIANPAINT.NS,Asian Paints Limited,https://www.asianpaints.com,Basic Materials,2288.6572,3394.9,2124.75,2245.5,0.372,2245.5,38.14,2025-05-08,2025-06-10,24.8,1.11,2158230896640,58.8752,2245.5,Underperform
+PIDILITIND.NS,Pidilite Industries Limited,https://www.pidilite.com,Basic Materials,3192.5557,3415.0,2622.2,3062.3,0.339,3061.2,40.61,2025-05-08,2024-07-24,16.0,0.52,1579369627648,75.419846,3062.8,Hold

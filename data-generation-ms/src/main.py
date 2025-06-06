@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.generate_stock_data import generate_stock_data
 from src.retrive_stock_data import retrive_stock_data
+from src.generate_stock_info import generate_stock_info
+import pandas as pd
 
 app = FastAPI()
 
@@ -35,6 +37,9 @@ def generate_data():
     finally:
         file.close()
 
+@app.get("/generate-stock-info", tags=["Data Generation"])
+def generate_info():
+    generate_stock_info()
 
 @app.get("/retrive-data", tags=["Data Retrieval"])
 def retrive_data(ticker: str):
