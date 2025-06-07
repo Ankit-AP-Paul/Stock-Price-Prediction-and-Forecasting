@@ -184,3 +184,28 @@ def get_stock_history(ticker_symbol: str, credentials: HTTPAuthorizationCredenti
         return {"data": data_dict, "message": "Stock data retrieved successfully", "status": 200}
     except Exception as e:
         return {"message": f"Error retrieving stock data: {str(e)}", "status": 500}
+
+@app.get("/top-gainers-and-losers", response_model=dict, tags=["Stock"])
+def get_top_gainers_and_losers(n:int, credentials: HTTPAuthorizationCredentials = Depends(security)):
+    token = credentials.credentials
+    user_id = decode_access_token(token)
+    try:
+        engine = create_engine(DATABASE_URL)
+        query1 = text("SELECT * FROM percentage_change ORDER BY percentage_change DESC LIMIT :n")
+        top_gainers = pd.read_sql_query(query1, engine, params={
+                                 "n": n})
+        query2 = text("SELECT * FROM percentage_change ORDER BY percentage_change ASC LIMIT :n")
+        top_losers = pd.read_sql_query(query2, engine, params={
+                                 "n": n})
+        engine.dispose()
+        top_gainers_list = top_gainers.to_dict(orient="records")
+        top_losers_list = top_losers.to_dict(orient="records")
+        return {
+            "top_gainers": top_gainers_list,
+            "top_losers": top_losers_list,
+            "message": "Top gainers and losers retrieved successfully",
+            "status": 200
+        }
+    except Exception as e:
+        return {"message": f"Error retrieving top gainers and losers: {str(e)}", "status": 500}
+
