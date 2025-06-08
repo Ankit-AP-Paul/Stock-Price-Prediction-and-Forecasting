@@ -12,11 +12,13 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 from src.schemas import UserCreate, UserLogin, UserResponse, TokenResponse, UserProfileResponse
 import yfinance as yf
 import pandas as pd
+from pymongo import MongoClient
 
 load_dotenv()
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 JWT_SECRET = os.environ.get("JWT_SECRET")
+MONGO_DB_URL = os.environ.get("MONGO_URI")
 
 Base = declarative_base()
 engine = create_engine(DATABASE_URL)
@@ -209,3 +211,40 @@ def get_top_gainers_and_losers(n:int, credentials: HTTPAuthorizationCredentials 
     except Exception as e:
         return {"message": f"Error retrieving top gainers and losers: {str(e)}", "status": 500}
 
+
+@app.get("/all-news", response_model=dict, tags=["News"])
+def get_all_news(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    token = credentials.credentials
+    user_id = decode_access_token(token)
+    try:
+        client = MongoClient(MONGO_DB_URL)
+        db = client["stock_news"]
+        collection = db["articles"]
+        data = collection.find().sort('published_date', -1)
+        data = list(data)
+        for article in data:
+            article['_id'] = str(article['_id']) 
+            article['published_date'] = article['published_date'].strftime('%Y-%m-%d %H:%M:%S') if 'published_date' in article else None
+        client.close()
+        return {"data": data, "message": "News retrieved successfully", "status": 200}
+    except Exception as e:
+        return {"message": f"Error retrieving news: {str(e)}", "status": 500}
+
+
+@app.get("/news-by-ticker", response_model=dict, tags=["News"])
+def get_news_by_ticker(ticker_symbol: str, credentials: HTTPAuthorizationCredentials = Depends(security)):
+    token = credentials.credentials
+    user_id = decode_access_token(token)
+    try:
+        client = MongoClient(MONGO_DB_URL)
+        db = client["stock_news"]
+        collection = db["articles"]
+        data = collection.find({"company": ticker_symbol}).sort('published_date', -1)
+        data = list(data)
+        for article in data:
+            article['_id'] = str(article['_id']) 
+            article['published_date'] = article['published_date'].strftime('%Y-%m-%d %H:%M:%S') if 'published_date' in article else None
+        client.close()
+        return {"data": data, "message": "News by ticker retrieved successfully", "status": 200}
+    except Exception as e:
+        return {"message": f"Error retrieving news by ticker: {str(e)}", "status": 500}
