@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.generate_stock_data import generate_stock_data
 from src.retrive_stock_data import retrive_stock_data
+from src.generate_stock_info import generate_stock_info
+from src.top_gainers_losers import find_top_gainers_losers
+import pandas as pd
 
 app = FastAPI()
 
@@ -35,6 +38,13 @@ def generate_data():
     finally:
         file.close()
 
+@app.get("/generate-stock-info", tags=["Data Generation"])
+def generate_info():
+    generate_stock_info()
+
+@app.get("/generate-top-gainers-losers", tags=["Data Generation"])
+def generate_top_gainers_losers():
+    find_top_gainers_losers()
 
 @app.get("/retrive-data", tags=["Data Retrieval"])
 def retrive_data(ticker: str):
