@@ -1,2 +1,8 @@
 fastapi
 uvicorn
+transformers
+torch
+pandas
+numpy
+pydantic
+python-multipart
