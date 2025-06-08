@@ -1,0 +1,39 @@
+# Finance LLM Chatbot - Requirements
+# Core dependencies for the Finance LLM Chatbot project
+
+# Data Processing & Analysis
+pandas>=1.5.0
+numpy>=1.24.0
+
+# Stock Data & Financial APIs
+yfinance>=0.2.18
+
+# Visualization
+matplotlib>=3.6.0
+
+# Web Framework & API
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+
+# HTTP Requests
+requests>=2.31.0
+
+# Text Processing & Fuzzy Matching
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.21.0
+
+# Optional: For faster fuzzy string matching
+# Install with: pip install python-Levenshtein
+
+# Standard Library (included with Python)
+# - os
+# - sys
+# - re
+# - json
+# - time
+# - random
+# - glob
+# - datetime
+# - argparse
+# - typing
